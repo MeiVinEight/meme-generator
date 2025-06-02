@@ -222,3 +222,11 @@ def get_data_dir() -> Path:
 
 def get_data_file(filename: str) -> Path:
     return get_data_dir() / filename
+
+def config_file_path():
+    # check current dir
+    currdir = Path("./meme-generator.toml")
+    if currdir.exists():
+        return currdir
+    return get_config_file("meme-generator.toml")
+

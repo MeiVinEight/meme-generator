@@ -5,9 +5,9 @@ import toml
 from pydantic import BaseModel
 
 from .compat import model_dump, type_validate_python
-from .dirs import get_config_file
+from .dirs import config_file_path
 
-config_file_path = get_config_file("config.toml")
+config_file_path = config_file_path()
 
 
 class MemeConfig(BaseModel):
